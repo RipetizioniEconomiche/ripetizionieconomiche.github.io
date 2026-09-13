@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ripetizioni & Aiuto Compiti | Medie e Superiori</title>
+    
+    <!-- Tailwind CSS per lo stile -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#2563eb', // Blu professionale
+                        secondary: '#1e40af',
+                        accent: '#f59e0b', // Giallo ambra per evidenziare
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Stile aggiuntivo per un effetto vetro sulla navbar */
+        .glass-navbar {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <nav class="fixed w-full z-50 glass-navbar border-b border-slate-200 shadow-sm transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-extrabold text-primary flex items-center gap-2">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        Ripetizioni<span class="text-slate-800">Economiche</span>
+                    </a>
+                </div>
+                
+                <!-- Link Desktop -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#chi-siamo" class="text-slate-600 hover:text-primary font-medium transition-colors">I tuoi Tutor</a>
+                    <a href="#materie" class="text-slate-600 hover:text-primary font-medium transition-colors">Materie</a>
+                    <a href="#metodo" class="text-slate-600 hover:text-primary font-medium transition-colors">Metodo</a>
+                    <a href="#contatti" class="bg-primary hover:bg-secondary text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                        Contattaci
+                    </a>
+                </div>
+
+                <!-- Menu Mobile Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-primary focus:outline-none p-2">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Menu Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+            <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
+                <a href="#chi-siamo" class="block px-3 py-3 text-slate-700 font-medium hover:bg-slate-50 rounded-lg">I tuoi Tutor</a>
+                <a href="#materie" class="block px-3 py-3 text-slate-700 font-medium hover:bg-slate-50 rounded-lg">Materie</a>
+                <a href="#metodo" class="block px-3 py-3 text-slate-700 font-medium hover:bg-slate-50 rounded-lg">Metodo</a>
+                <a href="#contatti" class="block px-3 py-3 mt-2 text-center bg-primary text-white font-medium rounded-lg shadow-sm">Contattaci</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col items-center justify-center flex-grow text-center">
+        <div class="w-full max-w-3xl space-y-8 flex flex-col items-center">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight">
+                Studiare non è mai stato così semplice.
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto">
+                Siamo due studenti universitari appassionati di insegnamento. Aiutiamo i ragazzi delle scuole <strong>medie e superiori</strong> a ritrovare la motivazione e a superare ogni ostacolo scolastico con un metodo su misura.
+            </p>
+            
+            <!-- Pulsanti centrati -->
+            <div class="flex flex-col sm:flex-row justify-center gap-4 pt-2 w-full">
+                <a href="#contatti" class="text-center bg-primary hover:bg-secondary text-white px-8 py-4 rounded-xl font-medium transition-all shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transform hover:-translate-y-1">
+                    Prenota la prima lezione
+                </a>
+                <a href="#chi-siamo" class="text-center bg-white border-2 border-slate-200 hover:border-slate-300 text-slate-700 px-8 py-4 rounded-xl font-medium transition-all hover:bg-slate-50">
+                    Conosciamoci meglio
+                </a>
+            </div>
+            
+            <!-- Trust indicators centrati -->
+            <div class="flex items-center justify-center gap-6 pt-6 text-sm text-slate-500 font-medium flex-wrap w-full">
+                <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Lezioni sia online che in presenza 
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Orari flessibili
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="chi-siamo" class="py-24 bg-white relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold tracking-widest text-primary uppercase mb-3">I tuoi alleati</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Chi siamo</h3>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">Non siamo i classici prof severi. Siamo ragazzi come te, che ci sono passati prima e sanno esattamente come aiutarti nel miglior modo possibile.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                
+                <!-- TUTOR 1 (MODIFICA QUI I TUOI DATI) -->
+                <div class="bg-slate-50 rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-6">
+                        <div class="relative">
+                            <img src="https://placehold.co/200x200/cbd5e1/475569?text=La+tua+Foto" alt="Il tuo nome" class="w-28 h-28 rounded-full object-cover border-4 border-white shadow-md group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute bottom-0 right-0 bg-green-500 w-5 h-5 rounded-full border-2 border-white"></div>
+                        </div>
+                        <div class="text-center sm:text-left">
+                            <h3 class="text-2xl font-bold text-slate-900">Sathya</h3>
+                            <p class="text-primary font-medium mt-1">Studente di Fisica ad Unipi</p>
+                            <p class="text-sm text-slate-500 mt-2">📍 Zona Pisa e  La Spezia/Online</p>
+                        </div>
+                    </div>
+                    <blockquote class="text-slate-600 mb-8 italic relative">
+                        <span class="absolute -top-4 -left-2 text-4xl text-slate-200 font-serif">"</span>
+                        Ciao! Mi sono diplomato al Liceo Scientifico con 100 e lode e ora studio Fisica. Ho sempre amato aiutare i miei compagni nel caso avessero bisogno di una mano. Il mio obiettivo è farti capire la logica dietro le formule, rendendo la matematica e la fisica non solo comprensibili, ma quasi divertenti, e cercare di farti appassionare e apprendere al meglio le materie umanistiche!
+                    </blockquote>
+                    <div class="space-y-4">
+                        <h4 class="text-xs uppercase tracking-wider font-bold text-slate-400">Le mie specialità</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-purple-100 text-purple-700 px-3 py-1.5 rounded-lg text-sm font-semibold">Matematica</span>
+                            <span class="bg-green-100 text-green-700 px-3 py-1.5 rounded-lg text-sm font-semibold">Fisica</span>
+                            <span class="bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-sm font-semibold">Materie Umanistiche</span>
+                            <span class="bg-orange-100 text-orange-700 px-3 py-1.5 rounded-lg text-sm font-semibold">Inglese</span>
+                            <span class="bg-red-100 text-red-700 px-3 py-1.5 rounded-lg text-sm font-semibold">Scienze</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TUTOR 2 (MODIFICA QUI I DATI DEL TUO AMICO) -->
+                <div class="bg-slate-50 rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-6">
+                        <div class="relative">
+                            <img src="https://placehold.co/200x200/cbd5e1/475569?text=Foto+Amico" alt="Nome Amico" class="w-28 h-28 rounded-full object-cover border-4 border-white shadow-md group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute bottom-0 right-0 bg-green-500 w-5 h-5 rounded-full border-2 border-white"></div>
+                        </div>
+                        <div class="text-center sm:text-left">
+                            <h3 class="text-2xl font-bold text-slate-900">Giuseppe</h3>
+                            <p class="text-primary font-medium mt-1">Studente di Matematica ad Unipi</p>
+                            <p class="text-sm text-slate-500 mt-2">📍 Zona Pisa/Online</p>
+                        </div>
+                    </div>
+                    <blockquote class="text-slate-600 mb-8 italic relative">
+                        <span class="absolute -top-4 -left-2 text-4xl text-slate-200 font-serif">"</span>
+                        Ehilà! La mia passione è da sempre la matematica. Credo fermamente che avere un buon metodo di studio eviti di passare giornate sui libri. Cercherò di farti capire che la matematica è molto più che formule strane, ma un mondo che passo passo ti farò scoprire in maniera semplice.
+                    </blockquote>
+                    <div class="space-y-4">
+                        <h4 class="text-xs uppercase tracking-wider font-bold text-slate-400">Le mie specialità</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-purple-100 text-purple-700 px-3 py-1.5 rounded-lg text-sm font-semibold">Matematica</span>
+                            <span class="bg-green-100 text-green-700 px-3 py-1.5 rounded-lg text-sm font-semibold">Fisica</span>
+                            <span class="bg-red-100 text-red-700 px-3 py-1.5 rounded-lg text-sm font-semibold">Inglese</span>
+                            
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="materie" class="py-24 bg-slate-900 text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold tracking-widest text-accent uppercase mb-3">Cosa facciamo</h2>
+                <h3 class="text-3xl md:text-4xl font-bold mb-6">Lezioni per ogni esigenza</h3>
+                <p class="text-lg text-slate-400 max-w-2xl mx-auto">Copriamo sia l'area scientifica che quella umanistica. Scegliamo insieme il percorso migliore in base alla tua classe e ai tuoi obiettivi.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Box Scuole Medie -->
+                <div class="bg-slate-800 rounded-3xl p-8 border border-slate-700 hover:border-accent transition-colors">
+                    <div class="w-14 h-14 bg-slate-700 text-accent rounded-2xl flex items-center justify-center mb-6 shadow-inner">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Scuole Medie</h3>
+                    <p class="text-slate-400 mb-6">Supporto costante per i compiti pomeridiani. Costruiamo le fondamenta per un metodo di studio solido, essenziale per affrontare le superiori.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-accent shrink-0 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-slate-300">Aiuto compiti generale (tutte le materie)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-accent shrink-0 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-slate-300">Preparazione alle verifiche scritte e orali</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-accent shrink-0 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-slate-300">Preparazione per l'esame di Terza Media (Tesina inclusa)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Box Scuole Superiori -->
+                <div class="bg-slate-800 rounded-3xl p-8 border border-slate-700 hover:border-primary transition-colors">
+                    <div class="w-14 h-14 bg-slate-700 text-primary rounded-2xl flex items-center justify-center mb-6 shadow-inner">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Scuole Superiori</h3>
+                    <p class="text-slate-400 mb-6">Lezioni mirate sulle singole discipline. Ideali per recuperare debiti formativi, insufficienze o per preparare verifiche difficili (Licei, Tecnici, Professionali).</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-primary shrink-0 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-slate-300"><strong>Area Scientifica:</strong> Matematica, Fisica, Scienze, Chimica.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-primary shrink-0 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-slate-300"><strong>Area Umanistica & Lingue:</strong> Italiano, Storia, Filosofia, Latino, Inglese, Storia dell'Arte.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-primary shrink-0 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-slate-300">Simulazione di interrogazioni e supporto mappe concettuali.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="metodo" class="py-24 bg-blue-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-slate-900 mb-8">Come funzionano le nostre lezioni?</h2>
+            
+           <div class="grid sm:grid-cols-3 gap-8 relative text-center">
+                
+                <div class="relative z-10">
+                    <div class="w-16 h-16 mx-auto bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold border-4 border-blue-50 shadow-lg mb-4">1</div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-2">Ci Contatti</h4>
+                    <p class="text-sm text-slate-600">Ci spieghi quali sono le tue difficoltà e in quali materie ti serve una mano.</p>
+                </div>
+                
+                <div class="relative z-10">
+                    <div class="w-16 h-16 mx-auto bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold border-4 border-blue-50 shadow-lg mb-4">2</div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-2">Prima Lezione</h4>
+                    <p class="text-sm text-slate-600">Facciamo una lezione conoscitiva per inquadrare il piano d'azione e capire il metodo migliore per te.</p>
+                </div>
+                
+                <div class="relative z-10">
+                    <div class="w-16 h-16 mx-auto bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold border-4 border-blue-50 shadow-lg mb-4">3</div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-2">Raggiungi l'obiettivo</h4>
+                    <p class="text-sm text-slate-600">Migliori i voti, impari a studiare in autonomia e ritrovi la tranquillità.</p>
+                </div>
+            </div>
+
+            <div class="mt-16 bg-white p-8 rounded-3xl shadow-sm border border-slate-200 inline-block">
+                <h4 class="text-xl font-bold text-slate-900 mb-4">Tariffe trasparenti</h4>
+                <p class="text-slate-600 mb-2">I nostri prezzi variano in base a lezioni singole o pacchetti di ore (scontati).</p>
+                <p class="text-2xl font-extrabold text-primary">A partire da 15€ / l'ora</p>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="contatti" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+            
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Pronto a iniziare?</h2>
+            <p class="text-lg text-slate-600 mb-12 max-w-2xl">
+                Scrivici senza impegno per informazioni, per concordare gli orari o per chiederci se copriamo la tua zona.
+            </p>
+            
+            <!-- Contenitore dei contatti -->
+            <div class="flex flex-col sm:flex-row justify-center gap-12 w-full">
+                
+                <!-- Blocco WhatsApp -->
+                <div class="flex flex-col items-center">
+                    <div class="bg-blue-100 p-4 rounded-full text-primary mb-4 inline-flex items-center justify-center">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-slate-900 text-lg">WhatsApp per Sathya</h4>
+                    <p class="text-slate-600 mb-2">Rispondo sempre in giornata.</p>
+                    <a href="#" class="text-primary font-bold text-lg hover:underline transition-all">+39 347 938 4317</a>
+                </div>
+                
+                <!-- Blocco WhatsApp -->
+                <div class="flex flex-col items-center">
+                    <div class="bg-blue-100 p-4 rounded-full text-primary mb-4 inline-flex items-center justify-center">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-slate-900 text-lg">WhatsApp per Giuseppe</h4>
+                    <p class="text-slate-600 mb-2">Rispondo sempre in poche ore.</p>
+                    <a href="#" class="text-primary font-bold text-lg hover:underline transition-all">+39 371 121 1401</a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 py-12 border-t border-slate-800 mt-auto">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                <span class="text-xl font-bold text-white">Ripetizioni<span class="text-slate-400">Economiche</span></span>
+            </div>
+            <p class="text-slate-500 text-sm">© 2026 RipetizioniEconomiche. Creato con passione per l'insegnamento.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Gestione Menu Mobile
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Chiudi il menu mobile quando si clicca su un link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Funzione per simulare l'invio del form (messaggio finto invece dell'alert)
+        function showFormMessage() {
+            const messageDiv = document.getElementById('form-success-message');
+            messageDiv.classList.remove('hidden');
+            setTimeout(() => {
+                messageDiv.classList.add('hidden');
+            }, 5000); // Nasconde il messaggio dopo 5 secondi
+        }
+    </script>
+</body>
+</html>
